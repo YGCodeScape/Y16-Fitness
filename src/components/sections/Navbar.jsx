@@ -1,0 +1,101 @@
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+import { NAV_LINKS } from '../../data/content';
+import Button from '../ui/Button';
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <motion.header
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'glass shadow-md py-3'
+          : 'bg-transparent py-5'
+      }`}
+    >
+      <div className="container-custom flex items-center justify-between h-20">
+        {/* Logo */}
+        <a href="#home" className="flex items-center gap-2 group">
+          <div className="w-8 h-8 bg-[#3B7BF6] rounded-lg flex items-center justify-center shadow-md">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M3 14L9 4L15 14H3Z" fill="white" />
+              <path d="M6 14L9 9L12 14H6Z" fill="rgba(255,255,255,0.4)" />
+            </svg>
+          </div>
+          <span className="text-lg font-bold tracking-tight text-[#0D0D12]">
+            Y16 <span className="text-[#3B7BF6] italic">fitness</span>
+          </span>
+        </a>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-sm font-medium text-[#0D0D12]/70 hover:text-[#3B7BF6] transition-colors duration-200"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* CTA */}
+        <div className="hidden md:flex items-center gap-3">
+          <Button variant="outline" size="lg" href="#events">
+            Contact Us
+          </Button>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden p-2 rounded-lg text-[#0D0D12]"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden glass border-t border-white/20 overflow-hidden"
+          >
+            <nav className="container-custom py-4 flex flex-col gap-4">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-sm font-medium text-[#0D0D12]/80 hover:text-[#3B7BF6] py-2 border-b border-black/5 transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <Button variant="primary" size="sm" href="#events" className="self-start mt-2">
+                Contact Us
+              </Button>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  );
+}
