@@ -123,6 +123,9 @@ body {
 }
 
 
-.contact-btn {
+.lg-btn {
   padding: 8px 16px;
+}
+.sm-btn {
+  padding: 4px 8px;
 }

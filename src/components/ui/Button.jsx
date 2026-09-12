@@ -22,9 +22,9 @@ export default function Button({
   type = 'button',
 }) {
   const sizes = {
-    sm: 'px-4 py-2 text-sm',
+    sm: 'sm-btn text-sm',
     md: 'px-6 py-3 text-sm',
-    lg: 'contact-btn text-base',
+    lg: 'lg-btn text-base',
   };
 
   const variants = {

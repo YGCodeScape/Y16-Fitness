@@ -26,6 +26,7 @@ export default function Navbar() {
       }`}
     >
       <div className="container-custom flex items-center justify-between h-20">
+        
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 group">
           <div className="w-8 h-8 bg-[#3B7BF6] rounded-lg flex items-center justify-center shadow-md">
@@ -78,13 +79,15 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden glass border-t border-white/20 overflow-hidden"
           >
-            <nav className="container-custom py-4 flex flex-col gap-4">
+            <nav className="container-custom flex flex-col gap-4"
+              style={{ padding: "10px 30px", }}
+            >
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-sm font-medium text-[#0D0D12]/80 hover:text-[#3B7BF6] py-2 border-b border-black/5 transition-colors"
+                  className="text-2xl font-medium text-[#0D0D12]/80 hover:text-[#3B7BF6] py-2 border-b border-black/5 transition-colors"
                 >
                   {link.label}
                 </a>
