@@ -106,7 +106,7 @@ body {
 
 /* ── Section padding ── */
 .section-pad {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 /* ── Container ── */
@@ -173,4 +173,14 @@ body {
 }
 .mini-badge {
   padding: 4px 8px;
+}
+.yoga-header {
+  margin-bottom: 40px;
+}
+.yogo-sub {
+  margin-bottom: 40px;
+}
+.yoga-text {
+  margin-top: 20px;
+  font-size: 80px;
 }
