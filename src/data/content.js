@@ -24,7 +24,7 @@ export const HEALTH_METRICS = {
   badge: 'SELECT YOUR NEEDS',
   headline: 'Personalize Your Health Journey',
   subtext:
-    'Choose your focus area and get tailored recommendations for nutrition, exercise, and wellness — all in one place.',
+    '"Choose your focus area and get tailored recommendations for nutrition, exercise, and wellness all in one place." We go beyond fitness by empowering you with insights and guidance to boost your blood cell production, enhance circulation, and improve heart health.',
   categories: [
     { id: 1, icon: '🫀', label: 'Heart Health', color: '#FF6B8A', bg: '#FFF0F3' },
     { id: 2, icon: '🧠', label: 'Brain Power', color: '#7B61FF', bg: '#F3F0FF' },

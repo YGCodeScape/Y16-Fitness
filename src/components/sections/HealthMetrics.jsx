@@ -28,7 +28,7 @@ export default function HealthMetrics() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-xs text-[#3B7BF6] font-bold uppercase tracking-widest mb-4"
+              className="text-lg text-[#3B7BF6] font-bold uppercase tracking-widest feet-badge"
             >
               {HEALTH_METRICS.badge}
             </motion.p>
@@ -46,7 +46,7 @@ export default function HealthMetrics() {
                     hover
                     delay={0}
                     onClick={() => setActive(cat.id)}
-                    className={`p-5 flex flex-col gap-3 border-2 transition-colors duration-200 ${
+                    className={`need-card flex flex-col gap-3 border-2 transition-colors duration-200 ${
                       active === cat.id
                         ? 'border-[#3B7BF6]/60 shadow-[0_0_24px_rgba(59,123,246,0.18)]'
                         : 'border-transparent'
@@ -104,7 +104,7 @@ export default function HealthMetrics() {
                 key={active}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="glass rounded-2xl p-5 flex items-center gap-4"
+                className="feet-extra glass rounded-2xl flex items-center gap-4"
               >
                 <div
                   className="w-14 h-14 rounded-xl flex items-center justify-center text-3xl flex-shrink-0"
@@ -137,7 +137,7 @@ export default function HealthMetrics() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="inline-flex items-center gap-3 self-start glass rounded-full px-4 py-2"
+              className="doctor-badge inline-flex items-center gap-3 self-start glass rounded-full"
             >
               <span className="text-xl">👨‍⚕️</span>
               <div>
