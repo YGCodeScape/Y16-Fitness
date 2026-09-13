@@ -122,9 +122,11 @@ body {
   }
 }
 
-
+.md-btn {
+  padding: 14px 18px;
+}
 .lg-btn {
-  padding: 8px 16px;
+  padding: 10px 16px;
 }
 .sm-btn {
   padding: 6px 12px;
@@ -144,6 +146,11 @@ body {
 .need-card {
   padding: 20px;
 }
+.dish-card {
+  padding: 20px;
+  background: #fdfdfda8;
+  backdrop-filter: blur(14px);
+}
 .feet-badge {
   margin-bottom: 8px;
 }
@@ -152,4 +159,18 @@ body {
 }
 .doctor-badge {
   padding: 10px 20px;
+}
+.meal-text {
+   font-family: "Leckerli One", cursive;
+   font-weight: 400;
+}
+.cal-unit {
+  margin-left: 4px;
+}
+.cal-label {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.mini-badge {
+  padding: 4px 8px;
 }

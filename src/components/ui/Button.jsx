@@ -23,7 +23,7 @@ export default function Button({
 }) {
   const sizes = {
     sm: 'sm-btn text-sm',
-    md: 'px-6 py-3 text-sm',
+    md: 'md-btn text-sm',
     lg: 'lg-btn text-base',
   };
 

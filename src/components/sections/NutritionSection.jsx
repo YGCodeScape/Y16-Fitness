@@ -9,9 +9,7 @@ export default function NutritionSection() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section
-      id="coach"
-      className="section-pad relative overflow-hidden"
+    <section id="coach" className="section-pad relative overflow-hidden"
       style={{ background: 'linear-gradient(160deg, #EFF2F8 0%, #F0EFEB 60%)' }}
     >
 
@@ -24,7 +22,7 @@ export default function NutritionSection() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-xs text-[#3B7BF6] font-bold uppercase tracking-widest"
+              className="text-lg text-[#3B7BF6] font-bold uppercase tracking-widest"
             >
               {NUTRITION.badge}
             </motion.p>
@@ -37,7 +35,7 @@ export default function NutritionSection() {
               className="text-4xl md:text-5xl font-black leading-tight text-[#0D0D12]"
             >
               Fit your body with{' '}
-              <span className="gradient-text">balanced</span> meals
+              balanced <span className="gradient-text meal-text italic"> meals</span>
             </motion.h2>
 
             <motion.p
@@ -49,29 +47,6 @@ export default function NutritionSection() {
             >
               {NUTRITION.subtext}
             </motion.p>
-
-            {/* Diet type tabs */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="flex flex-wrap gap-2"
-            >
-              {NUTRITION.tabs.map((tab, i) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(i)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    activeTab === i
-                      ? 'bg-[#0D0D12] text-white shadow-md'
-                      : 'glass text-[#6B7280] hover:text-[#0D0D12]'
-                  }`}
-                >
-                  {tab}
-                </button>
-              ))}
-            </motion.div>
 
             {/* Plan CTA */}
             <motion.div
@@ -88,27 +63,6 @@ export default function NutritionSection() {
                 Explore Recipes
               </Button>
             </motion.div>
-
-            {/* Macro breakdown */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="flex gap-4 flex-wrap"
-            >
-              {NUTRITION.calories.breakdown.map((m) => (
-                <div key={m.name} className="flex items-center gap-2">
-                  <span
-                    className="w-2.5 h-2.5 rounded-full flex-shrink-0"
-                    style={{ background: m.color }}
-                  />
-                  <span className="text-xs text-[#6B7280]">
-                    {m.name} <strong className="text-[#0D0D12]">{m.pct}%</strong>
-                  </span>
-                </div>
-              ))}
-            </motion.div>
           </div>
 
           {/* ── Right: Food image + Calories card ── */}
@@ -119,18 +73,15 @@ export default function NutritionSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden float-anim"
-              style={{
-                background: 'linear-gradient(135deg, #e8f4f8, #c8e6e0)',
-                boxShadow: '0 30px 80px rgba(59,123,246,0.15)',
-              }}
+              className="relative w-full h-full md:w-120 md:h-100 rounded-full float-anim"
             >
-              {/* Fallback gradient bowl illustration */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-8xl mb-2">🥗</div>
-                  <p className="text-[#6B7280] text-sm font-medium">Balanced Bowl</p>
-                </div>
+              {/* Food bowl illustration */}
+              <div className="relative w-full max-w-md mx-auto aspect-square rounded-full overflow-hidden border-8 border-white/50 shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Healthy bowl of food" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
 
@@ -138,22 +89,22 @@ export default function NutritionSection() {
             <GlassCard
               delay={0.5}
               hover={false}
-              className="absolute top-4 right-0 md:right-[-1rem] p-5 w-52 z-10"
+              className="dish-card absolute top-1 right-0 md:right-[-1rem] w-52 z-10"
             >
-              <p className="text-[10px] text-[#6B7280] font-semibold uppercase tracking-wider mb-1">
+              <p className="text-[10px] text-[#6B7280] font-semibold uppercase tracking-wider">
                 Calories
               </p>
               <p className="text-3xl font-black text-[#0D0D12] leading-none">
                 {NUTRITION.calories.value}
-                <span className="text-sm font-normal text-[#3B7BF6] ml-1">
+                <span className="cal-unit text-sm font-normal text-[#3B7BF6]">
                   {NUTRITION.calories.unit}
                 </span>
               </p>
-              <p className="text-[10px] text-[#6B7280] mt-1 mb-3">{NUTRITION.calories.label}</p>
+              <p className="text-[10px] text-[#6B7280] cal-label ">{NUTRITION.calories.label}</p>
 
               {/* Macro bars */}
               <div className="flex flex-col gap-2">
-                {NUTRITION.calories.breakdown.map((m) => (
+                {NUTRITION.calories.breakdown.map((m) => ( 
                   <div key={m.name}>
                     <div className="flex justify-between mb-1">
                       <span className="text-[10px] text-[#6B7280]">{m.name}</span>
@@ -180,7 +131,7 @@ export default function NutritionSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="absolute bottom-4 left-0 md:left-[-1rem] glass rounded-2xl px-4 py-3 flex items-center gap-3"
+              className="mini-badge absolute bottom-4 left-0 md:left-[-1rem] glass rounded-2xl flex items-center gap-3"
             >
               <span className="text-2xl">🌿</span>
               <div>

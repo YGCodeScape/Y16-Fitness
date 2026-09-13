@@ -39,8 +39,7 @@ export const NUTRITION = {
   badge: 'BALANCED MEALS',
   headline: ['Fit your body with', 'balanced meals'],
   subtext:
-    'With options for every dietary preference — including vegan, non-vegan, and allergy-friendly choices — our meal plans are designed to help you stay delicious, nutritious meals while achieving your health goals.',
-  tabs: ['Your Weight', 'Muscle Gain', 'Keto Plan', 'Vegan Diet'],
+    'With options for every dietary preference including vegan, non-vegan, and allergy-friendly choices our meal plans are designed to help you stay delicious, nutritious meals while achieving your health goals.',
   calories: {
     value: 2095,
     unit: 'Kcal',
