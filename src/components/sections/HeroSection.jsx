@@ -59,21 +59,21 @@ export default function HeroSection() {
       </div>
 
       <div className="container-custom relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="hero-grid-d grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* ── Left column: Text content ── */}
           <div className="flex flex-col gap-6 max-w-xl">
             {/* Headline */}
             <motion.h1
               {...fadeUp(0.2)}
-              className="text-5xl md:text-6xl lg:text-[4.2rem] font-black leading-[1.05] tracking-tight text-[#0D0D12]"
+              className=" text-5xl md:text-6xl lg:text-[4.2rem] font-black leading-[1] tracking-wide text-[#0D0D12]"
             >
               Perfect
               <br />
               Fitness Path
               <br />
               With{' '}
-              <span className="gradient-text italic">Y16</span>
+              <span className="gradient-text italic wordmark">Y16</span>
             </motion.h1>
 
             {/* Subtext */}
@@ -89,11 +89,8 @@ export default function HeroSection() {
               <Button variant="outline" size="lg" href="#about">
                 Join Community
               </Button>
-            </motion.div>
-
-            {/* Social icons */}
+              {/* Social icons */}
             <motion.div {...fadeUp(0.45)} className="flex items-center gap-3 -mt-1">
-              <span className="text-xs text-[#6B7280] font-medium">Follow us</span>
               {[SocialIcons.Instagram, SocialIcons.Twitter, SocialIcons.Facebook].map((Icon, i) => (
                 <a
                   key={i}
@@ -104,11 +101,13 @@ export default function HeroSection() {
                 </a>
               ))}
             </motion.div>
+            </motion.div>
 
             {/* Stats */}
             <motion.div
               {...fadeUp(0.5)}
-              className="flex items-start gap-10 pt-4 border-t border-[#0D0D12]/8"
+              className="flex items-start gap-10 border-t border-[#0D0D12]/8"
+              style={{paddingTop: "15px"}}
             >
               {HERO.stats.map((s) => (
                 <StatCounter
@@ -122,60 +121,30 @@ export default function HeroSection() {
           </div>
 
           {/* ── Right column: Model + floating cards ── */}
-          <div className="relative flex justify-center lg:justify-end items-end min-h-[520px] md:min-h-[600px]">
+          <div className="relative flex justify-center lg:justify-end items-end min-h-[520px] md:min-h-[500px]">
 
             {/* Model image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.92, x: 40 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
-              className="float-anim relative z-10 h-[500px] md:h-[560px] flex items-end justify-center"
+              className="float-anim relative z-10 h-[500px] md:h-[580px] flex items-end justify-center"
             >
               <img
-                src="/landing-model.png"
+                src="/landing-model2.png"
                 alt="Y16 Fitness athlete"
                 className="h-full w-auto object-contain object-bottom drop-shadow-2xl"
                 style={{ filter: 'drop-shadow(0 30px 60px rgba(59,123,246,0.2))' }}
               />
             </motion.div>
 
-            {/* Floating card — top right: Activity tracker */}
+            {/* Floating card — TOP right: Hearth rate */}
             <GlassCard
-              delay={0.6}
+              delay={0.8}
               hover={false}
-              className="absolute top-[8%] right-0 lg:right-[-1rem] xl:right-0 p-4 w-52 z-20"
+              className="top-glass-card absolute top-[8%] right-0 lg:right-[-1rem] xl:right-0 w-45 z-20"
             >
-              <p className="text-[10px] text-[#6B7280] font-semibold uppercase tracking-wider mb-2">
-                Weekly Activity
-              </p>
-              <div className="flex items-end gap-1 h-12">
-                {[40, 65, 50, 80, 60, 90, 75].map((h, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ scaleY: 0 }}
-                    animate={{ scaleY: 1 }}
-                    transition={{ duration: 0.5, delay: 0.7 + i * 0.06, ease: 'easeOut' }}
-                    style={{
-                      originY: 1,
-                      height: `${h}%`,
-                      background: i === 5 ? 'linear-gradient(180deg,#3B7BF6,#6FA3FF)' : 'rgba(59,123,246,0.2)',
-                      borderRadius: '2px',
-                      flexShrink: 0,
-                      flex: 1,
-                    }}
-                  />
-                ))}
-              </div>
-              <p className="text-[10px] text-[#3B7BF6] font-semibold mt-2">+12% this week ↑</p>
-            </GlassCard>
-
-            {/* Floating card — bottom left: Pulse/Heart rate */}
-            <GlassCard
-              delay={0.7}
-              hover={false}
-              className="absolute bottom-[12%] left-0 lg:left-[-1rem] xl:left-0 p-4 w-44 z-20"
-            >
-              <div className="flex items-center gap-2 mb-2">
+              <div className="flex items-center gap-2 ">
                 <span className="text-lg">❤️</span>
                 <span className="text-[10px] text-[#6B7280] font-semibold uppercase tracking-wider">
                   Heart Rate
@@ -190,28 +159,27 @@ export default function HeroSection() {
               </div>
             </GlassCard>
 
-            {/* Floating card — bottom right: Calories */}
+            {/* Floating card — bottom left: users reviews */}
             <GlassCard
-              delay={0.8}
+              delay={0.7}
               hover={false}
-              className="absolute bottom-[4%] right-2 p-3 w-36 z-20"
+              className="float-card-rate absolute bottom-[12%] left-0 lg:left-[-1rem] xl:left-0 w-44 z-20"
             >
-              <p className="text-[10px] text-[#6B7280] font-semibold uppercase tracking-wider">
-                Calories
-              </p>
-              <p className="text-xl font-black text-[#3B7BF6] mt-1">
-                486 <span className="text-xs font-normal text-[#6B7280]">kcal</span>
-              </p>
-              <div className="mt-2 w-full h-1.5 bg-[#3B7BF6]/15 rounded-full overflow-hidden">
-                <motion.div
-                  className="h-full rounded-full bg-[#3B7BF6]"
-                  initial={{ width: 0 }}
-                  animate={{ width: '62%' }}
-                  transition={{ duration: 1.2, delay: 1.2, ease: 'easeOut' }}
-                />
-              </div>
-              <p className="text-[10px] text-[#6B7280] mt-1">62% of goal</p>
+              <div className="flex -space-x-3">
+                  {[1,2,3,4].map((i) => (
+                    <img 
+                      key={i}
+                      className="w-10 h-10 rounded-full border-2 border-white object-cover" 
+                      src={`https://i.pravatar.cc/100?img=${i+10}`} 
+                      alt="member" 
+                    />
+                  ))}
+                </div>
+                <div className="text-xs font-bold text-slate-800">
+                  12k+ Review's 
+                </div>
             </GlassCard>
+
           </div>
         </div>
       </div>

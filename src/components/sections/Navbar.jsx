@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { RiWhatsappFill } from "@remixicon/react";
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../../data/content';
 import Button from '../ui/Button';
@@ -35,8 +36,8 @@ export default function Navbar() {
               <path d="M6 14L9 9L12 14H6Z" fill="rgba(255,255,255,0.4)" />
             </svg>
           </div>
-          <span className="text-lg font-bold tracking-tight text-[#0D0D12]">
-            Y16 <span className="text-[#3B7BF6] italic">fitness</span>
+          <span className="wordmark text-3xl font-bold tracking-tight text-[#0D0D12]">
+            Y16 <span className="text-[#3B7BF6] italic">Fitness</span>
           </span>
         </a>
 
@@ -56,6 +57,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <Button variant="outline" size="lg" href="#events">
+            <RiWhatsappFill size={22} color="#3B7BF6"/>
             Contact Us
           </Button>
         </div>
@@ -80,20 +82,21 @@ export default function Navbar() {
             className="md:hidden glass border-t border-white/20 overflow-hidden"
           >
             <nav className="container-custom flex flex-col gap-4"
-              style={{ padding: "10px 30px", }}
+              style={{ padding: "20px 30px", }}
             >
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-2xl font-medium text-[#0D0D12]/80 hover:text-[#3B7BF6] py-2 border-b border-black/5 transition-colors"
+                  className="text-4xl font-bold text-[#0D0D12]/80 hover:text-[#3B7BF6] border-b border-black/5 transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
-              <Button variant="primary" size="sm" href="#events" className="self-start mt-2">
-                Contact Us
+              <Button variant="primary" size="sm" href="#events" className="self-start">
+                 <RiWhatsappFill size={19} color="#F0EFEB"/> 
+                 Contact Us
               </Button>
             </nav>
           </motion.div>
