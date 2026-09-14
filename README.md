@@ -12,7 +12,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 
-![Y16 Fitness Preview](public/hero-model.jpg)
+![Y16 Fitness Preview](public/y16-fitness-hero.jpeg)
 
 </div>
 
@@ -27,8 +27,6 @@
 ## 🚀 Live Demo
 
 👉 **[https://y16fitness.vercel.app](https://y16fitness.vercel.app)**
-
-> ⚠️ Replace this link with your actual deployed URL after hosting.
 
 ---
 
@@ -84,50 +82,11 @@ Glass         rgba(255,255,255,0.22) + backdrop-blur(16px)
 
 ---
 
-## 📁 Project Structure
-
-```
-Y16-fitness/
-├── public/
-│   ├── hero-model.jpg       ← Athlete image (replace with transparent PNG)
-│   ├── favicon.svg
-│   └── site.webmanifest
-├── src/
-│   ├── components/
-│   │   ├── ui/
-│   │   │   ├── CustomCursor.jsx    ← Magnetic dual-circle cursor
-│   │   │   ├── GlassCard.jsx       ← Reusable glass card + tilt
-│   │   │   ├── Button.jsx          ← primary / outline / ghost variants
-│   │   │   ├── StarburstSVG.jsx    ← 24-ray decorative ornament
-│   │   │   ├── StatCounter.jsx     ← Scroll-triggered counter
-│   │   │   └── MarqueeBanner.jsx   ← Infinite marquee
-│   │   └── sections/
-│   │       ├── Navbar.jsx
-│   │       ├── HeroSection.jsx
-│   │       ├── HealthMetrics.jsx
-│   │       ├── NutritionSection.jsx
-│   │       ├── YogaSection.jsx
-│   │       ├── EventsSection.jsx
-│   │       └── Footer.jsx
-│   ├── data/content.js       ← All text/data in one place
-│   ├── hooks/
-│   │   ├── useScrollReveal.js
-│   │   └── useCounter.js
-│   ├── styles/index.css
-│   ├── App.jsx
-│   └── main.jsx
-├── index.html
-├── vite.config.js
-└── package.json
-```
-
----
-
 ## 🏃 Getting Started
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/Y16-fitness.git
+git clone https://github.com/YGCodeScape/Y16-Fitness.git
 cd Y16-fitness
 
 # 2. Install dependencies
@@ -158,16 +117,6 @@ export const EVENTS = [ { title: '...', date: '...', venue: '...' }, ... ]
 // etc.
 ```
 
-| What to change | File |
-|---|---|
-| Text, stats, event data | `src/data/content.js` |
-| Colors & glass styles | `src/styles/index.css` → `@theme { }` block |
-| Hero athlete image | Replace `public/hero-model.jpg` with a transparent PNG |
-| Social links & brand name | `src/components/sections/Footer.jsx` |
-| SEO title, description, OG image | `index.html` |
-
----
-
 ## 📄 License
 
 This project is open source under the [MIT License](LICENSE).
@@ -178,15 +127,14 @@ This project is open source under the [MIT License](LICENSE).
 
 ## 💼 Want this for YOUR fitness brand?
 
-> **Like this design? I can build a fully customized version of this site for your personal fitness brand, gym, coaching business, or wellness startup.**
+> **Like this design? Make it Yours, I can build a fully customized version of this site for your personal fitness brand, gym, coaching business, or wellness startup.**
 >
 > Custom logo · your color palette · your content · your domain · deployed & ready.
 
 **📩 Get in touch:**
 
-[![Email](https://img.shields.io/badge/Email-Contact%20Me-3B7BF6?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
-[![Instagram](https://img.shields.io/badge/Instagram-@yourhandle-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/yourhandle)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-3B7BF6?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yashgaikwaad16@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yash-gaikwad-a0969833b/)
 
 *Response within 24 hours · Project turnaround 3–7 days*
 
