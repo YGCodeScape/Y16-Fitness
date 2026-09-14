@@ -89,7 +89,7 @@ export default function YogaSection() {
 
                 {/* Tag pill */}
                 <div
-                  className="absolute top-4 left-4 px-2.5 py-0.5 rounded-full text-[10px] font-semibold"
+                  className="sm-btn absolute top-4 left-4 rounded-full text-[10px] font-semibold"
                   style={{
                     background: `${CARD_ACCENTS[idx]}22`,
                     border: `1px solid ${CARD_ACCENTS[idx]}44`,
@@ -102,17 +102,16 @@ export default function YogaSection() {
 
                 {/* Content bottom */}
                 <div
-                  className="absolute bottom-0 left-0 right-0 p-5"
+                  className="absolute bottom-5 left-20 right-0 w-55 "
                   style={{
-                    background:
-                      'linear-gradient(0deg, rgba(0,0,0,0.6) 0%, transparent 100%)',
+                    background: 'transparent',
                     zIndex: 2,
                   }}
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="rounded-3xl yoga-card-content glass flex items-center justify-center">
                     <div>
-                      <p className="text-white font-bold text-base">{style.title}</p>
-                      <p className="text-white/50 text-xs mt-0.5">Explore program →</p>
+                      <p className="font-bold text-base">{style.title}</p>
+                      <p className="text-white/50 text-xs">Explore program →</p>
                     </div>
                   </div>
                 </div>

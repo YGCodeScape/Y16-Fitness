@@ -184,3 +184,9 @@ body {
   margin-top: 20px;
   font-size: 80px;
 }
+.yoga-card-content {
+  padding: 14px 12px;
+}
+.yoga-card-content p {
+  color: #0D0D12;
+}

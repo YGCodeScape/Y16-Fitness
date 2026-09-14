@@ -53,12 +53,12 @@ export const NUTRITION = {
 };
 
 export const YOGA_STYLES = [
-  { id: 1, title: 'Muscle Stretch', image: '/public/Muscle-Stretch-yoga.png ', tag: 'Beginner' },
-  { id: 2, title: 'Relaxation Stretch', image: '/public/relaxing-yoga.png', tag: 'Intermediate' },
-  { id: 3, title: 'Balance Booster', image: '/public/Balance-booster-yoga.png', tag: 'Advanced' },
-  { id: 4, title: 'Flexibility Enhancer', image: 'Flexibility-yoga.png', tag: 'Beginner' },
-  { id: 5, title: 'Full Body Stretch', image: '/public/backbend-posture-yoga.png', tag: 'Intermediate' },
-  { id: 6, title: 'Strength Flow', image: 'Strength-flow-yoga.png', tag: 'Advanced' },
+  { id: 1, title: 'Muscle Stretch', image: '/Muscle-Stretch-yoga.png ', tag: 'Beginner' },
+  { id: 2, title: 'Relaxation Stretch', image: '/relaxing-yoga.png', tag: 'Intermediate' },
+  { id: 3, title: 'Balance Booster', image: '/Balance-booster-yoga.png', tag: 'Advanced' },
+  { id: 4, title: 'Flexibility Enhancer', image: '/Flexibility-yoga.png', tag: 'Beginner' },
+  { id: 5, title: 'Full Body Stretch', image: '/backbend-posture-yoga.png', tag: 'Intermediate' },
+  { id: 6, title: 'Strength Flow', image: '/Strength-flow-yoga.png', tag: 'Advanced' },
 ];
 
 export const EVENTS = [
