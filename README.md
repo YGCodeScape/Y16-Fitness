@@ -12,7 +12,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 
-![Y16 Fitness Preview](public/y16-fitness-hero.jpeg)
+![Y16 Fitness Preview](public/y16-fit-hero.jpeg)
 
 </div>
 
