@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/favicon.svg" width="64" height="64" alt="Y16 Fitness Logo" />
+<img src="public/Y16fitness-logo.png" width="64" height="64" alt="Y16 Fitness Logo" />
 
 # Y16 Fitness
 

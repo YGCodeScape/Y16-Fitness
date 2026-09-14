@@ -30,11 +30,8 @@ export default function Navbar() {
         
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-[#3B7BF6] rounded-lg flex items-center justify-center shadow-md">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M3 14L9 4L15 14H3Z" fill="white" />
-              <path d="M6 14L9 9L12 14H6Z" fill="rgba(255,255,255,0.4)" />
-            </svg>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+            <img src="/Y16fitness-logo.png" alt="logo" style={{objectFit: 'cover', width: 'full'}}/>
           </div>
           <span className="wordmark text-3xl font-bold tracking-tight text-[#0D0D12]">
             Y16 <span className="text-[#3B7BF6] italic">Fitness</span>

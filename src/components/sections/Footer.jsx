@@ -60,11 +60,8 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             <a href="#home" className="flex items-center gap-2 group self-start">
-              <div className="w-8 h-8 bg-[#3B7BF6] rounded-lg flex items-center justify-center">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M3 14L9 4L15 14H3Z" fill="white" />
-                  <path d="M6 14L9 9L12 14H6Z" fill="rgba(255,255,255,0.4)" />
-                </svg>
+              <div className="w-8 h-8 bg-[#3B7BF6] rounded-lg flex items-center justify-center overflow-hidden">
+                  <img src="/Y16fitness-logo.png" alt="logo" style={{objectFit: 'cover', width: 'full'}}/>
               </div>
               <span className="text-lg font-bold tracking-tight text-white">
                 Y16 <span className="text-[#3B7BF6] italic">fitness</span>
