@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react';
 import { YOGA_STYLES } from '../../data/content';
 import Button from '../ui/Button';
 
-
 const CARD_ACCENTS = ['#3B7BF6', '#10B981', '#F59E0B', '#8B5CF6', '#EF4444', '#EC4899'];
 
 const containerVariants = {
@@ -50,16 +49,15 @@ export default function YogaSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+          className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {YOGA_STYLES.map((style, idx) => (
             <motion.div key={style.id} variants={cardVariants}>
               <motion.div
                 whileHover={{ scale: 1.03, y: -4 }}
                 transition={{ duration: 0.25 }}
-                className="relative rounded-2xl overflow-hidden cursor-pointer group bg-transparent"
+                className="glass relative rounded-4xl overflow-hidden cursor-pointer group bg-transparent"
                 style={{
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
                   minHeight: '250px',
                 }}
               >
@@ -102,16 +100,18 @@ export default function YogaSection() {
 
                 {/* Content bottom */}
                 <div
-                  className="absolute bottom-5 left-20 right-0 w-55 "
+                  className="yoga-content absolute bottom-5 left-0 right-0 flex justify-center w-full"
                   style={{
                     background: 'transparent',
                     zIndex: 2,
                   }}
                 >
-                  <div className="rounded-3xl yoga-card-content glass flex items-center justify-center">
+                  <div className="rounded-3xl yoga-card-content glass flex items-center justify-center"
+                    style={{padding: '12px 22px'}}
+                   >
                     <div>
                       <p className="font-bold text-base">{style.title}</p>
-                      <p className="text-white/50 text-xs">Explore program →</p>
+                      <p className="text-white/50 text-xs">Explore program</p>
                     </div>
                   </div>
                 </div>
@@ -127,7 +127,8 @@ export default function YogaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="flex justify-center mt-10"
+          className="flex justify-center"
+          style={{marginTop: '45px',}}
         >
           <Button variant="primary" icon={<ArrowRight size={16} />}>
             Check All Styles

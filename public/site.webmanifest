@@ -1,0 +1,18 @@
+{
+  "name": "Y16 Fitness",
+  "short_name": "Y16 Fitness",
+  "description": "Perfect your fitness path with personalized training, balanced nutrition, and expert yoga programs.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F0EFEB",
+  "theme_color": "#3B7BF6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

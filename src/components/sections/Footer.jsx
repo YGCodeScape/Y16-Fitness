@@ -41,29 +41,21 @@ export default function Footer() {
     <footer className="bg-[#0D0D12] text-white/80 overflow-hidden">
       {/* Top CTA band */}
       <div className="border-b border-white/8">
-        <div className="container-custom py-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="container-custom flex flex-col md:flex-row md:items-center justify-between gap-6" style={{paddingBlock: '24px' }}>
           <div>
-            <h3 className="text-2xl md:text-3xl font-black text-white mb-2">
+            <h3 className="text-2xl md:text-3xl font-black text-white">
               Ready to transform your fitness?
             </h3>
             <p className="text-white/50 text-sm">
               Join 500K+ people already on their Y16 journey.
             </p>
           </div>
-          <motion.a
-            href="#home"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#3B7BF6] text-white font-semibold text-sm hover:bg-[#2b6be6] transition-colors flex-shrink-0"
-          >
-            Get Started Free <ArrowRight size={16} />
-          </motion.a>
         </div>
       </div>
 
       {/* Main footer grid */}
-      <div className="container-custom py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+      <div className="container-custom" style={{paddingBlock: '20px'}}>
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12">
 
           {/* Brand column */}
           <div className="lg:col-span-2 flex flex-col gap-4">
@@ -80,8 +72,8 @@ export default function Footer() {
             </a>
 
             <p className="text-white/40 text-sm leading-relaxed max-w-xs">
-              Your personal fitness brand — tailored training, balanced nutrition, and
-              community-driven wellness for every body and every goal.
+              Your personal fitness brand tailored training, balanced nutrition, and
+              community driven wellness for every body and every goal.
             </p>
 
             {/* Social icons */}
@@ -130,29 +122,15 @@ export default function Footer() {
           transition={{ duration: 1, ease: 'easeOut' }}
           className="container-custom pt-6 pb-0"
         >
-          <div
-            className="text-[clamp(4rem,14vw,10rem)] font-black leading-none tracking-tight select-none"
-            style={{
-              color: 'transparent',
-              WebkitTextStroke: '1px rgba(255,255,255,0.08)',
-              backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-            }}
+      {/* Giant Footer Logo */}
+      <div className=" w-full overflow-hidden translate-y-1/4 select-none pointer-events-none flex items-end justify-center">
+         <h1 className="text-[15vw] font-black tracking-tight text-white/70 leading-none italic m-0 p-0 flex items-end"
+           style={{fontFamily: 'Limelight, sans-serif'}}
           >
-            Y16 fitness
-          </div>
+            Y16 Fitness
+         </h1>
+      </div>
         </motion.div>
-
-        {/* Copyright bar */}
-        <div className="container-custom flex flex-col sm:flex-row items-center justify-between gap-2 py-5 border-t border-white/6">
-          <p className="text-white/25 text-xs">
-            © 2025 All rights reserved. Y16 Fitness
-          </p>
-          <p className="text-white/20 text-xs">
-            Built with ❤️ for your fitness journey
-          </p>
-        </div>
       </div>
     </footer>
   );

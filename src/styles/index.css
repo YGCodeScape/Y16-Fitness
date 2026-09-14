@@ -17,6 +17,12 @@
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
+
+::selection {
+  background-color: #0D0D12;
+  color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -185,8 +191,19 @@ body {
   font-size: 80px;
 }
 .yoga-card-content {
-  padding: 14px 12px;
+  padding: 14px 24px;
 }
 .yoga-card-content p {
   color: #0D0D12;
+}
+.event-sec {
+  padding: 30px;
+}
+.marquee-b {
+  padding-block: 24px;
+}
+.events-sec {
+  margin-inline: auto;
+  padding-inline: 16px;
+  padding-bottom: 32px;
 }
