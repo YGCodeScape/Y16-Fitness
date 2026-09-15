@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 
 // Inline SVG brand icons (lucide-react v4+ removed social brands)
 const InstagramIcon = () => (

@@ -6,7 +6,7 @@
 
 **A modern personal fitness brand website — built to inspire motion.**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-3B7BF6?style=for-the-badge&logo=vercel&logoColor=white)](https://y16fitness.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-3B7BF6?style=for-the-badge&logo=vercel&logoColor=white)](https://Y16Fitness.vercel.app)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-11-black?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
