@@ -131,7 +131,7 @@ export default function NutritionSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="mini-badge absolute bottom-4 left-0 md:left-[-1rem] glass rounded-2xl flex items-center gap-3"
+              className="mini-badge absolute bottom-4 left-0 md:left-[-1rem] glass backdrop-blur-lg rounded-2xl flex items-center gap-3"
             >
               <span className="text-2xl">🌿</span>
               <div>

@@ -56,7 +56,7 @@ export default function YogaSection() {
               <motion.div
                 whileHover={{ scale: 1.03, y: -4 }}
                 transition={{ duration: 0.25 }}
-                className="glass relative rounded-4xl overflow-hidden cursor-pointer group bg-transparent"
+                className="glass backdrop-blur-lg relative rounded-4xl overflow-hidden cursor-pointer group bg-transparent"
                 style={{
                   minHeight: '250px',
                 }}
@@ -106,7 +106,7 @@ export default function YogaSection() {
                     zIndex: 2,
                   }}
                 >
-                  <div className="rounded-3xl yoga-card-content glass flex items-center justify-center"
+                  <div className="rounded-3xl yoga-card-content glass backdrop-blur-lg flex items-center justify-center"
                     style={{padding: '12px 22px'}}
                    >
                     <div>
